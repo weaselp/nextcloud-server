@@ -122,7 +122,9 @@ div.multiselect {
 			position: absolute;
 			right: 8px;
 			top: 8px;
-			padding: 10px !important;
+			padding: 0 !important;
+			min-width: 16px;
+			min-height: 16px;
 			background-position: center;
 		}
 	}
