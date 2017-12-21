@@ -116,11 +116,14 @@ div.multiselect {
 			text-overflow: ellipsis;
 			width: 90%;
 			white-space: nowrap;
+			line-height: 20px;
 		}
 		&:last-child {
 			position: absolute;
 			right: 8px;
 			top: 8px;
+			padding: 10px !important;
+			background-position: center;
 		}
 	}
 }
