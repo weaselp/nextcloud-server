@@ -1,6 +1,6 @@
 <div class="app-navigation-new">
 	<button type="button" class="icon-add"><?php p($l->t('New user'))?></button>
-	<form class="newUserMenu popovermenu menu-left open" id="newuser" autocomplete="off">
+	<form class="newUserMenu popovermenu menu-left" id="newuser" autocomplete="off">
 		<ul>
 			<li>
 				<label class="icon-user" for="newusername">
