@@ -35,6 +35,7 @@ translation('settings');
 ?>
 
 <div id="app-navigation">
+	<?php print_unescaped($this->inc('users/part.createuser')); ?>
 	<?php print_unescaped($this->inc('users/part.grouplist')); ?>
 	<div id="app-settings">
 		<div id="app-settings-header">
@@ -88,6 +89,5 @@ translation('settings');
 </div>
 
 <div id="app-content">
-	<?php print_unescaped($this->inc('users/part.createuser')); ?>
 	<?php print_unescaped($this->inc('users/part.userlist', $userlistParams)); ?>
 </div>

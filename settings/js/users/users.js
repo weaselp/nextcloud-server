@@ -508,7 +508,7 @@ var UserList = {
 			checked: checked,
 			oncheck: addUserToGroup,
 			onuncheck: removeUserFromGroup,
-			minWidth: 100
+			minWidth: 150
 		});
 	},
 
@@ -542,7 +542,7 @@ var UserList = {
 			checked: checked,
 			oncheck: checkHandler,
 			onuncheck: checkHandler,
-			minWidth: 100
+			minWidth: 150
 		});
 	},
 
