@@ -1,6 +1,6 @@
 <div class="app-navigation-new">
 	<button type="button" class="icon-add"><?php p($l->t('New user'))?></button>
-	<form class="newUserMenu" id="newuser" autocomplete="off">
+	<form class="newUserMenu" id="newuser" autocomplete="off" style="display: none;">
 		<div>
 			<input id="newusername" type="text" required
 				placeholder="<?php p($l->t('Username'))?>" name="username"

@@ -540,6 +540,7 @@ span.usersLastLoginTooltip {
 	margin: 2px 0;
 	display: flex;
 	flex-direction: column;
+
 	.groups {
 		display: inline;
 	}
@@ -551,11 +552,11 @@ span.usersLastLoginTooltip {
 		position: relative;
 		top: -1px;
 	}
-	input:not([type=submit]) {
+	input:not([type='submit']) {
 		width: 100%;
 		margin: 2px 0;
 	}
-	input[type=submit] {
+	input[type='submit'] {
 		flex-grow: 2;
 	}
 	> div {
