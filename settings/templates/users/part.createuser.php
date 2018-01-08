@@ -9,7 +9,7 @@
 		<div>
 			<input id="newuserpassword" type="password" required
 				   placeholder="<?php p($l->t('Password'))?>" name="password"
-				   autocomplete="off" autocapitalize="none" autocorrect="off" />
+				   autocomplete="new-password" autocapitalize="none" autocorrect="off" />
 		</div>
 		<div>
 			<input id="newemail" type="text" style="display:none"
