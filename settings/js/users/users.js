@@ -32,7 +32,7 @@ var UserList = {
 		// initially the list might already contain user entries (not fully ajaxified yet)
 		// initialize these entries
 		this.$el.find('.quota-user').singleSelect().on('change', this.onQuotaSelect);
-		OC.registerMenu($('.app-navigation-new > button'), $('#newuser'))
+		OC.registerMenu($('.app-navigation-new > button'), $('#newuserHeader'))
 	},
 
 	/**
