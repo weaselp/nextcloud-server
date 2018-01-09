@@ -16,6 +16,59 @@
 			<th class="lastLogin" scope="col"><?php p($l->t('Last login')); ?></th>
 			<th class="userActions"></th>
 		</tr>
+		<tr>
+			<form class="newUserMenu" id="newuser" autocomplete="off" style="display: none;">
+				<th class="icon-add"></th>
+				<th>
+					<input id="newusername" type="text" required
+						placeholder="<?php p($l->t('Username'))?>" name="username"
+						autocomplete="off" autocapitalize="none" autocorrect="off" />
+				</th>
+				<th>
+					<input id="newdisplayname" type="text"
+						placeholder="<?php p($l->t('Full name'))?>" name="displayname"
+						autocomplete="off" autocapitalize="none" autocorrect="off" />
+				</th>
+				<th>
+					<input id="newuserpassword" type="password" required
+						   placeholder="<?php p($l->t('Password'))?>" name="password"
+						   autocomplete="new-password" autocapitalize="none" autocorrect="off" />
+				</th>
+				<th class="mailAddress">
+					<input id="newemail" type="text"
+						   placeholder="<?php p($l->t('E-Mail'))?>" name="email"
+						   autocomplete="off" autocapitalize="none" autocorrect="off" />
+				</th>
+				<th class="groups">
+					<div class="groupsListContainer multiselect button" data-placeholder="<?php p($l->t('Groups'))?>">
+						<span class="title groupsList"></span>
+						<span class="icon-triangle-s"></span>
+					</div>
+				</th>
+				<?php if((bool)$_['recoveryAdminEnabled']): ?>
+				<th class="recoveryPassword">
+					<input id="recoveryPassword"
+						   type="password"
+						   placeholder="<?php p($l->t('Admin Recovery Password'))?>"
+						   title="<?php p($l->t('Enter the recovery password in order to recover the users files during password change'))?>"
+						   alt="<?php p($l->t('Enter the recovery password in order to recover the users files during password change'))?>"/>
+				</th>
+			<?php else: ?>
+				<th></th>
+			<?php endif; ?>
+			<?php if(is_array($_['subadmins']) || $_['subadmins']): ?>
+				<th id="headerSubAdmins" scope="col"></th>
+			<?php endif;?>
+				<th class="headerQuota" scope="col"></th>
+				<th class="storageLocation" scope="col"></th>
+				<th class="userBackend" scope="col"></th>
+				<th class="lastLogin" scope="col"></th>
+				<th class="userActions">
+					<input type="submit" id="newsubmit" class="button icon-confirm has-tooltip" value="<?php p($l->t('Create'))?>" />
+				</th>
+			</form>
+
+		</tr>
 	</thead>
 	<tbody>
 		<!-- the following <tr> is used as a template for the JS part -->
