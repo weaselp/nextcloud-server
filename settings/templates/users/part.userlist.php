@@ -19,17 +19,17 @@
 			</tr>
 			<tr id="newuserHeader" style="display:none">
 				<th class="icon-add"></th>
-				<th>
+				<th class="name">
 					<input id="newusername" type="text" required
 						placeholder="<?php p($l->t('Username'))?>" name="username"
 						autocomplete="off" autocapitalize="none" autocorrect="off" />
 				</th>
-				<th>
+				<th class="displayName">
 					<input id="newdisplayname" type="text"
 						placeholder="<?php p($l->t('Full name'))?>" name="displayname"
 						autocomplete="off" autocapitalize="none" autocorrect="off" />
 				</th>
-				<th>
+				<th class="password">
 					<input id="newuserpassword" type="password" required
 						   placeholder="<?php p($l->t('Password'))?>" name="password"
 						   autocomplete="new-password" autocapitalize="none" autocorrect="off" />
@@ -56,12 +56,6 @@
 			<?php else: ?>
 				<th></th>
 			<?php endif; ?>
-			<?php if(is_array($_['subadmins']) || $_['subadmins']): ?>
-				<th id="headerSubAdmins" scope="col"></th>
-			<?php endif;?>
-				<th class="storageLocation" scope="col"></th>
-				<th class="userBackend" scope="col"></th>
-				<th class="lastLogin" scope="col"></th>
 				<th class="userActions">
 					<input type="submit" id="newsubmit" class="button icon-confirm has-tooltip" value="<?php p($l->t('Create'))?>" />
 				</th>

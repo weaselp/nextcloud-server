@@ -479,9 +479,10 @@ table.grid {
 	}
 }
 
-td {
+td, th {
 	&.name {
 		padding-left: .8em;
+		width: 10em;
 	}
 	&.password {
 		padding-left: .8em;
@@ -492,7 +493,9 @@ td {
 	&.displayName > img {
 		visibility: hidden;
 	}
-	&.password, &.displayName {
+	&.password,
+	&.displayName,
+	&.mailAddress {
 		width: 12em;
 		cursor: pointer;
 	}
@@ -533,8 +536,6 @@ span.usersLastLoginTooltip {
 	}
 }
 
-/* because of accessibility the name cell is <th> - therefore we enforce the black color */
-/* use same height as in files app */
 #newuser {
 	.groupsListContainer.hidden {
 		display: none;
@@ -543,6 +544,9 @@ span.usersLastLoginTooltip {
 		min-width: 150px !important;
 		position: relative;
 		top: -1px;
+	}
+	#newuserHeader input:not([type="submit"]) {
+		width: 100%;
 	}
 }
 
