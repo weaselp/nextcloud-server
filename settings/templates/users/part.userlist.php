@@ -57,7 +57,7 @@
 				<th></th>
 			<?php endif; ?>
 				<th class="userActions">
-					<input type="submit" id="newsubmit" class="button icon-confirm has-tooltip" value="<?php p($l->t('Create'))?>" />
+					<input type="submit" id="newsubmit" class="button icon-confirm has-tooltip" value="<?php p($l->t('Add user'))?>" />
 				</th>
 			</tr>
 		</thead>
