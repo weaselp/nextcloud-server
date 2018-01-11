@@ -53,8 +53,6 @@
 						   title="<?php p($l->t('Enter the recovery password in order to recover the users files during password change'))?>"
 						   alt="<?php p($l->t('Enter the recovery password in order to recover the users files during password change'))?>"/>
 				</th>
-			<?php else: ?>
-				<th></th>
 			<?php endif; ?>
 				<th class="userActions">
 					<input type="submit" id="newsubmit" class="button icon-confirm has-tooltip" value="<?php p($l->t('Add user'))?>" />
