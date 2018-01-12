@@ -28,7 +28,7 @@ use OCP\Files\File;
 use OCP\Files\IRootFolder;
 use OCP\Files\SimpleFS\ISimpleFile;
 use OCP\IImage;
-use OCP\Image as img;
+use OCP\Image as OCPImage;
 use OCP\Preview\IProvider;
 
 /**
@@ -80,7 +80,9 @@ class GeneratorHelper {
 	 * @return IImage
 	 */
 	public function getImage(ISimpleFile $maxPreview) {
-		return new img($maxPreview->getContent());
+		$image = new OCPImage();
+		$image->loadFromData($maxPreview->getContent());
+		return $image;
 	}
 
 	/**
