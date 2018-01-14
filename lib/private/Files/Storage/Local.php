@@ -65,7 +65,7 @@ class Local extends \OC\Files\Storage\Common {
 		if ($this->datadir === '/') {
 			$this->realDataDir = $this->datadir;
 		} else {
-			$this->realDataDir = rtrim(realpath($this->datadir), '/') . '/';
+			$this->realDataDir = rtrim(realpath($this->datadir) ?: '', '/') . '/';
 		}
 		if (substr($this->datadir, -1) !== '/') {
 			$this->datadir .= '/';
