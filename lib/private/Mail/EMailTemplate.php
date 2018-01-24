@@ -434,7 +434,7 @@ EOF;
 
 		$this->ensureBodyIsOpened();
 
-		$this->htmlBody .= vsprintf($this->bodyText, [htmlspecialchars($text)]);
+		$this->htmlBody .= vsprintf($this->bodyText, [$text]);
 		if ($plainText !== false) {
 			$this->plainBody .= $plainText . PHP_EOL . PHP_EOL;
 		}
@@ -462,9 +462,9 @@ EOF;
 			$plainMetaInfo = $metaInfo;
 		}
 
-		$htmlText = htmlspecialchars($text);
+		$htmlText = $text;
 		if ($metaInfo) {
-			$htmlText = '<em style="color:#777;">' . htmlspecialchars($metaInfo) . '</em><br>' . $htmlText;
+			$htmlText = '<em style="color:#777;">' . $metaInfo . '</em><br>' . $htmlText;
 		}
 		if ($icon !== '') {
 			$icon = '<img src="' . htmlspecialchars($icon) . '" alt="&bull;">';
@@ -533,7 +533,7 @@ EOF;
 		$color = $this->themingDefaults->getColorPrimary();
 		$textColor = $this->themingDefaults->getTextColorPrimary();
 
-		$this->htmlBody .= vsprintf($this->buttonGroup, [$color, $color, $urlLeft, $color, $textColor, $textColor, htmlspecialchars($textLeft), $urlRight, htmlspecialchars($textRight)]);
+		$this->htmlBody .= vsprintf($this->buttonGroup, [$color, $color, $urlLeft, $color, $textColor, $textColor, $textLeft, $urlRight, $textRight]);
 		$this->plainBody .= $plainTextLeft . ': ' . $urlLeft . PHP_EOL;
 		$this->plainBody .= $plainTextRight . ': ' . $urlRight . PHP_EOL . PHP_EOL;
 
@@ -563,7 +563,7 @@ EOF;
 
 		$color = $this->themingDefaults->getColorPrimary();
 		$textColor = $this->themingDefaults->getTextColorPrimary();
-		$this->htmlBody .= vsprintf($this->button, [$color, $color, $url, $color, $textColor, $textColor, htmlspecialchars($text)]);
+		$this->htmlBody .= vsprintf($this->button, [$color, $color, $url, $color, $textColor, $textColor, $text]);
 
 		if ($plainText !== false) {
 			$this->plainBody .= $plainText . ': ';
