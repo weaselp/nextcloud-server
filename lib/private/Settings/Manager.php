@@ -449,7 +449,7 @@ class Manager implements IManager {
 			}
 			if ($section === 'additional') {
 				/** @var ISettings $form */
-				$form = new Personal\Additional($this->config);
+				$form = new Personal\Additional();
 				$forms[$form->getPriority()] = [$form];
 			}
 		} catch (QueryException $e) {
